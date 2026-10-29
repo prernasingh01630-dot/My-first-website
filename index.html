@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Cart - Good Products for Everyday Living</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. ANNOUNCEMENT BAR -->
+    <aside class="announcement-bar" aria-label="Announcement">
+        <div class="container">
+            <p class="announcement-text">Free standard delivery across India on orders over &#8377;999 | Easy 7-day returns</p>
+        </div>
+    </aside>
+
+    <!-- 2. MAIN HEADER -->
+    <header class="main-header">
+        <div class="container header-container">
+            <!-- Store Brand -->
+            <div class="brand">
+                <a href="#home" class="brand-link">
+                    <span class="brand-title">Urban Cart</span>
+                    <span class="brand-tagline">Everyday Essentials</span>
+                </a>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="header-search">
+                <form id="search-form" class="search-form" onsubmit="return false;">
+                    <label for="search-input" class="visually-hidden">Search products</label>
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="search-input" 
+                        placeholder="Search products by name..." 
+                        autocomplete="off"
+                    >
+                    <button type="button" id="search-btn" class="search-btn">Search</button>
+                </form>
+            </div>
+
+            <!-- Cart Trigger Button -->
+            <div class="header-cart">
+                <button 
+                    type="button" 
+                    id="cart-btn" 
+                    class="cart-btn" 
+                    aria-label="Open shopping cart" 
+                    aria-haspopup="dialog" 
+                    aria-expanded="false"
+                >
+                    <span class="cart-label">Cart:</span>
+                    <span id="cart-count" class="cart-count">0</span>
+                    <span class="cart-items-text">items</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. NAVIGATION BAR -->
+    <nav class="main-navigation" aria-label="Main Navigation">
+        <div class="container">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#products-section" class="nav-link">Shop All</a></li>
+                <li class="nav-item"><a href="#categories-anchor" class="nav-link">Categories</a></li>
+                <li class="nav-item"><a href="#benefits-section" class="nav-link">Why Choose Us</a></li>
+                <li class="nav-item"><a href="#contact-section" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- 4. HERO SECTION -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <!-- Hero Left Column: Text -->
+                <div class="hero-content">
+                    <span class="hero-badge">Welcome to Urban Cart</span>
+                    <h1 class="hero-heading">Good Products for Everyday Living.</h1>
+                    <p class="hero-description">
+                        Explore our carefully chosen collection of daily lifestyle, home, and workspace essentials. Built for honest utility, durable quality, and clean modern aesthetics.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#products-section" class="btn btn-primary">Explore Products</a>
+                    </div>
+                </div>
+
+                <!-- Hero Right Column: Image -->
+                <div class="hero-image-wrapper">
+                    <img 
+                        src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80" 
+                        alt="Urban Cart curated store lifestyle collection" 
+                        class="hero-image"
+                        loading="eager"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. BENEFITS SECTION -->
+        <section id="benefits-section" class="benefits-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Shop With Urban Cart</h2>
+                    <p class="section-subtitle">We believe in practical goods, clear commitments, and uncomplicated service.</p>
+                </div>
+
+                <div class="benefits-grid">
+                    <!-- Benefit 1 -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon-wrapper">01</div>
+                        <h3 class="benefit-title">Everyday Products</h3>
+                        <p class="benefit-description">
+                            Practical, high-utility essentials crafted for your daily life, home workspace, and personal routine.
+                        </p>
+                    </div>
+
+                    <!-- Benefit 2 -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon-wrapper">02</div>
+                        <h3 class="benefit-title">Clear Pricing</h3>
+                        <p class="benefit-description">
+                            Straightforward pricing in Indian rupees (&#8377;) with zero hidden fees, extra charges, or unexpected markups.
+                        </p>
+                    </div>
+
+                    <!-- Benefit 3 -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon-wrapper">03</div>
+                        <h3 class="benefit-title">Easy Shopping</h3>
+                        <p class="benefit-description">
+                            Smooth browsing, instant category filtering, fast keyword search, and a hassle-free shopping experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. FEATURED PRODUCTS SECTION -->
+        <section id="products-section" class="products-section">
+            <div class="container">
+                
+                <!-- Section Header -->
+                <div class="section-header" id="categories-anchor">
+                    <h2 class="section-title">Featured Products</h2>
+                    <p class="section-subtitle">Browse through our quality assortment of personal accessories, home goods, and everyday tech.</p>
+                </div>
+
+                <!-- Category Filters and Status Bar -->
+                <div class="filter-bar">
+                    <div class="filter-buttons-group" role="group" aria-label="Product Category Filter">
+                        <button type="button" class="filter-btn active" data-category="all">All Products</button>
+                        <button type="button" class="filter-btn" data-category="Accessories">Accessories</button>
+                        <button type="button" class="filter-btn" data-category="Home">Home</button>
+                        <button type="button" class="filter-btn" data-category="Tech">Tech</button>
+                    </div>
+
+                    <div class="filter-status">
+                        <span id="results-count-text">Showing all 8 products</span>
+                        <button type="button" id="clear-filters-btn" class="clear-filters-btn" style="display: none;">Reset Filters</button>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div id="product-grid" class="product-grid">
+
+                    <!-- Product 1: Canvas Tote Bag -->
+                    <article 
+                        class="product-card" 
+                        data-id="1" 
+                        data-name="Canvas Tote Bag" 
+                        data-category="Accessories" 
+                        data-price="799"
+                        data-image="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80"
+                    >
+                        <div class="product-image-container">
+                            <img 
+                                src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80" 
+                                alt="Canvas Tote Bag" 
+                                class="product-image"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Accessories</span>
+                            <h3 class="product-name">Canvas Tote Bag</h3>
+                            <p class="product-price">&#8377;799</p>
+                            <button type="button" class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 2: Modern Desk Lamp -->
+                    <article 
+                        class="product-card" 
+                        data-id="2" 
+                        data-name="Modern Desk Lamp" 
+                        data-category="Home" 
+                        data-price="1499"
+                        data-image="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80"
+                    >
+                        <div class="product-image-container">
+                            <img 
+                                src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80" 
+                                alt="Modern Desk Lamp" 
+                                class="product-image"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Home</span>
+                            <h3 class="product-name">Modern Desk Lamp</h3>
+                            <p class="product-price">&#8377;1,499</p>
+                            <button type="button" class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 3: Wireless Headphones -->
+                    <article 
+                        class="product-card" 
+                        data-id="3" 
+                        data-name="Wireless Headphones" 
+                        data-category="Tech" 
+                        data-price="2999"
+                        data-image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+                    >
+                        <div class="product-image-container">
+                            <img 
+                                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" 
+                                alt="Wireless Headphones" 
+                                class="product-image"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Tech</span>
+                            <h3 class="product-name">Wireless Headphones</h3>
+                            <p class="product-price">&#8377;2,999</p>
+                            <button type="button" class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 4: Ceramic Coffee Mug -->
+                    <article 
+                        class="product-card" 
+                        data-id="4" 
+                        data-name="Ceramic Coffee Mug" 
+                        data-category="Home" 
+                        data-price="449"
+                        data-image="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80"
+                    >
+                        <div class="product-image-container">
+                            <img 
+                                src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" 
+                                alt="Ceramic Coffee Mug" 
+                                class="product-image"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Home</span>
+                            <h3 class="product-name">Ceramic Coffee Mug</h3>
+                            <p class="product-price">&#8377;449</p>
+                            <button type="button" class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 5: Everyday Backpack -->
+                    <article 
+                        class="product-card" 
+                        data-id="5" 
+                        data-name="Everyday Backpack" 
+                        data-category="Accessories" 
+                        data-price="1899"
+                        data-image="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+                    >
+                        <div class="product-image-container">
+                            <img 
+                                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80" 
+                                alt="Everyday Backpack" 
+                                class="product-image"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Accessories</span>
+                            <h3 class="product-name">Everyday Backpack</h3>
+                            <p class="product-price">&#8377;1,899</p>
+                            <button type="button" class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 6: Bluetooth Speaker -->
+                    <article 
+                        class="product-card" 
+                        data-id="6" 
+                        data-name="Bluetooth Speaker" 
+                        data-category="Tech" 
+                        data-price="1999"
+                        data-image="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80"
+                    >
+                        <div class="product-image-container">
+                            <img 
+                                src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80" 
+                                alt="Bluetooth Speaker" 
+                                class="product-image"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Tech</span>
+                            <h3 class="product-name">Bluetooth Speaker</h3>
+                            <p class="product-price">&#8377;1,999</p>
+                            <button type="button" class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 7: Table Planter -->
+                    <article 
+                        class="product-card" 
+                        data-id="7" 
+                        data-name="Table Planter" 
+                        data-category="Home" 
+                        data-price="649"
+                        data-image="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=600&q=80"
+                    >
+                        <div class="product-image-container">
+                            <img 
+                                src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=600&q=80" 
+                                alt="Table Planter" 
+                                class="product-image"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Home</span>
+                            <h3 class="product-name">Table Planter</h3>
+                            <p class="product-price">&#8377;649</p>
+                            <button type="button" class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 8: Classic Wrist Watch -->
+                    <article 
+                        class="product-card" 
+                        data-id="8" 
+                        data-name="Classic Wrist Watch" 
+                        data-category="Accessories" 
+                        data-price="2499"
+                        data-image="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80"
+                    >
+                        <div class="product-image-container">
+                            <img 
+                                src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80" 
+                                alt="Classic Wrist Watch" 
+                                class="product-image"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="product-details">
+                            <span class="product-category">Accessories</span>
+                            <h3 class="product-name">Classic Wrist Watch</h3>
+                            <p class="product-price">&#8377;2,499</p>
+                            <button type="button" class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Empty State Message (Hidden by default, shown by JS when no search results) -->
+                <div id="no-products-message" class="no-products-message" style="display: none;">
+                    <div class="no-products-box">
+                        <h3 class="no-products-title">No products found</h3>
+                        <p class="no-products-desc">We couldn't find any items matching your current search or category filter. Try using different keywords or reset your filters.</p>
+                        <button type="button" id="reset-search-btn" class="btn btn-secondary">Show All Products</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 7. CONTACT / STORE INFO SECTION -->
+        <section id="contact-section" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Customer Support & Contact</h2>
+                    <p class="section-subtitle">We are here to assist with any questions regarding our products or orders.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Information Column -->
+                    <div class="contact-info-card">
+                        <h3 class="contact-card-title">Get In Touch</h3>
+                        <p class="contact-card-text">Feel free to reach out to our support team during our regular business hours.</p>
+                        
+                        <div class="contact-detail-row">
+                            <span class="detail-label">Email Support:</span>
+                            <span class="detail-value">support@urbancart.in</span>
+                        </div>
+                        <div class="contact-detail-row">
+                            <span class="detail-label">Helpline:</span>
+                            <span class="detail-value">+91 (080) 4123 4567</span>
+                        </div>
+                        <div class="contact-detail-row">
+                            <span class="detail-label">Support Hours:</span>
+                            <span class="detail-value">Monday to Saturday, 9:00 AM - 6:00 PM IST</span>
+                        </div>
+                        <div class="contact-detail-row">
+                            <span class="detail-label">Warehouse Hub:</span>
+                            <span class="detail-value">Industrial Area, Phase 2, Bengaluru, Karnataka, India</span>
+                        </div>
+                    </div>
+
+                    <!-- Quick Inquiry Form -->
+                    <div class="contact-form-card">
+                        <h3 class="contact-card-title">Send a Quick Message</h3>
+                        <form id="inquiry-form" class="inquiry-form" onsubmit="return false;">
+                            <div class="form-group">
+                                <label for="inquiry-name" class="form-label">Full Name</label>
+                                <input type="text" id="inquiry-name" class="form-input" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inquiry-email" class="form-label">Email Address</label>
+                                <input type="email" id="inquiry-email" class="form-input" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inquiry-message" class="form-label">Message</label>
+                                <textarea id="inquiry-message" class="form-textarea" rows="3" placeholder="How can we help you?" required></textarea>
+                            </div>
+                            <button type="submit" id="inquiry-submit-btn" class="btn btn-primary">Send Message</button>
+                            <p id="inquiry-feedback" class="form-feedback" style="display: none;"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 8. FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <!-- Footer Col 1 -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Urban Cart</h4>
+                <p class="footer-text">
+                    Your destination for functional, well-designed everyday goods. Providing reliable personal accessories, living essentials, and tech accessories with honest pricing.
+                </p>
+            </div>
+
+            <!-- Footer Col 2 -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products-section">All Products</a></li>
+                    <li><a href="#categories-anchor">Categories</a></li>
+                    <li><a href="#benefits-section">Why Choose Us</a></li>
+                    <li><a href="#contact-section">Customer Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Col 3 -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Product Categories</h4>
+                <ul class="footer-links">
+                    <li><a href="#products-section" class="footer-cat-link" data-cat="Accessories">Accessories</a></li>
+                    <li><a href="#products-section" class="footer-cat-link" data-cat="Home">Home Essentials</a></li>
+                    <li><a href="#products-section" class="footer-cat-link" data-cat="Tech">Tech Accessories</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Col 4 -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Delivery & Returns</h4>
+                <p class="footer-text">
+                    Standard shipping: 3-5 business days across India. Free delivery on orders over &#8377;999. Easy returns within 7 calendar days of delivery.
+                </p>
+            </div>
+        </div>
+
+        <!-- Sub-footer copyright -->
+        <div class="sub-footer">
+            <div class="container">
+                <p class="copyright-text">&copy; 2026 Urban Cart. All rights reserved. Designed for clean, everyday shopping.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 9. NOTIFICATION TOAST (Accessible live notification) -->
+    <div id="cart-toast" class="cart-toast" role="status" aria-live="polite">
+        <span id="cart-toast-message" class="cart-toast-message">Item added to cart</span>
+        <button type="button" id="cart-toast-action" class="cart-toast-btn">View Cart</button>
+    </div>
+
+    <!-- 10. ACCESSIBLE SHOPPING CART DRAWER & OVERLAY -->
+    <div id="cart-overlay" class="cart-overlay" tabindex="-1"></div>
+
+    <aside 
+        id="cart-drawer" 
+        class="cart-drawer" 
+        role="dialog" 
+        aria-modal="true" 
+        aria-label="Shopping Cart" 
+        aria-hidden="true"
+    >
+        <!-- Cart Drawer Header -->
+        <div class="cart-drawer-header">
+            <div class="cart-drawer-title-group">
+                <h2 class="cart-drawer-title">Shopping Cart</h2>
+                <span id="cart-drawer-count" class="cart-drawer-count-badge">0 items</span>
+            </div>
+            <button type="button" id="cart-close-btn" class="cart-close-btn" aria-label="Close cart">
+                Close &times;
+            </button>
+        </div>
+
+        <!-- Free Delivery Progress / Notice Banner -->
+        <div id="cart-shipping-notice" class="cart-shipping-notice">
+            <p id="shipping-notice-text" class="shipping-notice-text">
+                Add items to see delivery eligibility.
+            </p>
+            <div class="shipping-progress-track">
+                <div id="shipping-progress-bar" class="shipping-progress-bar" style="width: 0%;"></div>
+            </div>
+        </div>
+
+        <!-- Cart Items List Container -->
+        <div class="cart-drawer-body">
+            <div id="cart-items-container" class="cart-items-container">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Cart Cost & Bill Summary Footer -->
+        <div id="cart-drawer-footer" class="cart-drawer-footer">
+            <div class="bill-summary">
+                <h3 class="bill-summary-title">Order Cost & Bill Summary</h3>
+                
+                <div class="bill-row">
+                    <span class="bill-label">Items Subtotal</span>
+                    <span id="bill-subtotal" class="bill-value">&#8377;0</span>
+                </div>
+                
+                <div class="bill-row">
+                    <span class="bill-label">Delivery Fee</span>
+                    <span id="bill-shipping" class="bill-value">&#8377;0</span>
+                </div>
+                
+                <div class="bill-row bill-total-row">
+                    <span class="bill-label">Total Bill Amount</span>
+                    <span id="bill-total" class="bill-value bill-total-amount">&#8377;0</span>
+                </div>
+                
+                <p class="bill-tax-note">All prices are inclusive of standard GST and taxes.</p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="cart-drawer-actions">
+                <button type="button" id="checkout-btn" class="btn btn-primary btn-block">
+                    Proceed to Checkout
+                </button>
+                <div class="cart-secondary-actions">
+                    <button type="button" id="clear-cart-btn" class="btn-link">Clear Cart</button>
+                    <button type="button" id="continue-shopping-btn" class="btn-link">Continue Shopping</button>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 11. CHECKOUT ORDER PREVIEW MODAL -->
+    <div id="checkout-modal" class="modal-dialog-container" role="dialog" aria-modal="true" aria-label="Order Checkout Bill" style="display: none;">
+        <div class="modal-backdrop"></div>
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2 class="modal-title">Order Bill & Summary</h2>
+                <button type="button" id="checkout-modal-close" class="cart-close-btn" aria-label="Close modal">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <p class="modal-intro">Review your order details below before confirming:</p>
+                
+                <div id="checkout-items-summary" class="checkout-items-summary">
+                    <!-- Populated by JavaScript -->
+                </div>
+
+                <div class="checkout-bill-box">
+                    <div class="bill-row">
+                        <span>Items Subtotal:</span>
+                        <strong id="modal-subtotal">&#8377;0</strong>
+                    </div>
+                    <div class="bill-row">
+                        <span>Delivery Charges:</span>
+                        <strong id="modal-shipping">&#8377;0</strong>
+                    </div>
+                    <div class="bill-row modal-total-row">
+                        <span>Total Payable:</span>
+                        <strong id="modal-total">&#8377;0</strong>
+                    </div>
+                </div>
+
+                <div class="modal-notice-box">
+                    <p><strong>Front-End Demonstration:</strong> No real payment or backend connection is processed. Clicking "Place Order" will simulate order confirmation.</p>
+                </div>
+
+                <div id="order-success-message" class="order-success-message" style="display: none;">
+                    <h4>Order Placed Successfully!</h4>
+                    <p id="order-id-display">Order Reference: #UC-98421</p>
+                    <p>Thank you for shopping with Urban Cart. A confirmation has been generated.</p>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" id="place-order-btn" class="btn btn-primary">Place Order</button>
+                <button type="button" id="modal-back-btn" class="btn btn-secondary">Back to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
