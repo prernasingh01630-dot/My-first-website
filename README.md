@@ -10,7 +10,7 @@
 - **Tagline:** Everyday Essentials
 - **Hero Statement:** Good Products for Everyday Living
 - **Currency:** Indian Rupees (&#8377;)
-- **Tech Stack:** HTML5, CSS3, Vanilla JavaScript (No frameworks, no external libraries, no backend)
+- **Tech Stack:** HTML5, CSS3, Vanilla JavaScript 
 
 ---
 
